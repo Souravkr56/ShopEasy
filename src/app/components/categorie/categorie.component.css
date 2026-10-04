@@ -1,0 +1,183 @@
+.categories-page {
+  padding: 50px 7%;
+  background: #f8f9fc;
+  min-height: calc(100vh - 70px);
+}
+
+/* Page Header */
+
+.page-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.small-title {
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.page-header h1 {
+  font-size: 38px;
+  margin: 12px 0;
+  color: #1f2937;
+}
+
+.page-header p {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Categories */
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.category-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 22px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.category-card h2 {
+  color: #1f2937;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.category-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 44px;
+}
+
+.items {
+  display: block;
+  margin: 15px 0;
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.shop-link {
+  display: inline-block;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.shop-link:hover {
+  color: #312e81;
+}
+
+/* Bottom Banner */
+
+.category-banner {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  padding: 35px 40px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.category-banner span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.category-banner h2 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.category-banner p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.banner-button {
+  background: white;
+  color: #4f46e5;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.banner-button:hover {
+  background: #f3f4f6;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .categories-page {
+    padding: 35px 5%;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .category-banner h2 {
+    font-size: 22px;
+  }
+
+}

@@ -1,0 +1,66 @@
+<section class="categories-page">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <span class="small-title">SHOP BY CATEGORY</span>
+
+    <h1>Explore Our Categories</h1>
+
+    <p>
+      Find everything you need in one place. Browse our wide range of
+      products and discover something you love.
+    </p>
+  </div>
+
+  <!-- Categories Grid -->
+  <div class="categories-grid">
+
+    @for (category of categories; track category.name) {
+
+      <div class="category-card">
+
+        <div class="category-icon">
+          {{ category.icon }}
+        </div>
+
+        <h2>{{ category.name }}</h2>
+
+        <p>{{ category.description }}</p>
+
+        <span class="items">
+          {{ category.items }}
+        </span>
+
+        <a
+          [routerLink]="['/products']"
+          [queryParams]="{ category: category.name }"
+          class="shop-link">
+          Shop Now →
+        </a>
+
+      </div>
+
+    }
+
+  </div>
+
+  <!-- Bottom Banner -->
+  <div class="category-banner">
+
+    <div>
+      <span>SHOP SMART</span>
+
+      <h2>Everything You Need, All in One Place</h2>
+
+      <p>
+        Explore our products and enjoy great deals every day.
+      </p>
+    </div>
+
+    <a routerLink="/products" class="banner-button">
+      View All Products
+    </a>
+
+  </div>
+
+</section>

@@ -1,0 +1,178 @@
+<div class="products-page">
+
+  <!-- Page Header -->
+
+  <section class="page-header">
+
+    <h1>Our Products</h1>
+
+    <p>
+      Discover amazing products at great prices
+    </p>
+
+  </section>
+
+
+  <!-- Filters -->
+
+  <section class="filters">
+
+    <!-- Search -->
+
+    <div class="search">
+
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchText"
+      >
+
+      <span>🔍</span>
+
+    </div>
+
+
+    <!-- Categories -->
+
+    <div class="categories">
+
+      @for (category of categories; track category) {
+
+        <button
+          [class.active]="selectedCategory === category"
+          (click)="selectedCategory = category"
+        >
+          {{ category }}
+        </button>
+
+      }
+
+    </div>
+
+  </section>
+
+
+  <!-- Product Count -->
+
+  <div class="product-info">
+
+    <p>
+      Showing {{ filteredProducts.length }} products
+    </p>
+
+  </div>
+
+
+  <!-- Products -->
+
+  <section class="product-container">
+
+    @for (product of filteredProducts; track product.id) {
+
+      <div class="product-card">
+
+        <!-- Image -->
+
+        <div class="product-image">
+
+          <img
+            [src]="product.image"
+            [alt]="product.name"
+          >
+
+          <span class="category-badge">
+            {{ product.category }}
+          </span>
+
+        </div>
+
+
+        <!-- Product Details -->
+
+        <div class="product-details">
+
+          <h3>
+            {{ product.name }}
+          </h3>
+
+          <p class="description">
+            {{ product.description }}
+          </p>
+
+
+          <!-- Rating -->
+
+          <div class="rating">
+
+            <span>⭐</span>
+
+            <span>
+              {{ product.rating }}
+            </span>
+
+            <span class="reviews">
+              (120 reviews)
+            </span>
+
+          </div>
+
+
+          <!-- Price -->
+
+          <div class="price">
+
+            <span>
+              ₹{{ product.price }}
+            </span>
+
+          </div>
+
+
+          <!-- Buttons -->
+
+          <div class="buttons">
+
+            <button
+              class="cart-button"
+              (click)="addToCart(product)"
+            >
+              🛒 Add to Cart
+            </button>
+
+            <a
+              class="view-button"
+              [routerLink]="['/products', product.id]"
+            >
+              View
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </section>
+
+
+  <!-- No Products -->
+
+  @if (filteredProducts.length === 0) {
+
+    <div class="no-products">
+
+      <div>😔</div>
+
+      <h2>No products found</h2>
+
+      <p>
+        Try searching for another product.
+      </p>
+
+    </div>
+
+  }
+
+</div>

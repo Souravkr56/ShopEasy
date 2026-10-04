@@ -1,0 +1,61 @@
+<header class="header">
+
+  <!-- Logo -->
+  <div class="logo">
+    <a routerLink="/">
+      ShopEasy
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-menu">
+
+    <a routerLink="/home">Home</a>
+
+    <a routerLink="/products">
+      Products
+    </a>
+
+    <a routerLink="/categories">
+      Categories
+    </a>
+
+  </nav>
+
+  <!-- Search -->
+  <div class="search-box">
+
+    <input
+      type="text"
+      placeholder="Search products..."
+    >
+
+    <button>
+      🔍
+    </button>
+
+  </div>
+
+  <!-- User Actions -->
+  <div class="actions">
+
+    <a routerLink="/wishlist" title="Wishlist">
+      ❤️
+    </a>
+
+    <a routerLink="/carts" class="cart-link">
+  🛒 Cart
+
+  @if (cartService.cartCount() > 0) {
+    <span class="cart-count">
+      {{ cartService.cartCount() }}
+    </span>
+  }
+</a>
+    <a routerLink="/login" class="login">
+      👤 Login
+    </a>
+
+  </div>
+
+</header>

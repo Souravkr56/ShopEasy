@@ -1,0 +1,168 @@
+<section class="cart-page">
+
+  <!-- Page Header -->
+  <div class="cart-header">
+    <h1>Shopping Cart</h1>
+    <p>Review your items before checkout</p>
+  </div>
+
+  @if (cartService.items().length === 0) {
+
+    <!-- Empty Cart -->
+    <div class="empty-cart">
+
+      <div class="empty-icon">
+        🛒
+      </div>
+
+      <h2>Your cart is empty</h2>
+
+      <p>
+        You haven't added any products to your cart yet.
+      </p>
+
+      <a routerLink="/products" class="shop-button">
+        Continue Shopping
+      </a>
+
+    </div>
+
+  } @else {
+
+    <!-- Cart Content -->
+    <div class="cart-container">
+
+      <!-- Cart Items -->
+      <div class="cart-items">
+
+        <h2>Your Items</h2>
+
+        @for (item of cartService.items(); track item.id) {
+
+          <div class="cart-item">
+
+            <!-- Product Image -->
+            <div class="item-image">
+              <img
+                [src]="item.image"
+                [alt]="item.name"
+              />
+            </div>
+
+            <!-- Product Details -->
+            <div class="item-details">
+
+              <h3>{{ item.name }}</h3>
+
+              <p class="item-price">
+                ₹{{ item.price }}
+              </p>
+
+              <!-- Quantity -->
+              <div class="quantity-control">
+
+                <button
+                  type="button"
+                  (click)="cartService.decreaseQuantity(item.id)">
+                  −
+                </button>
+
+                <span>
+                  {{ item.quantity }}
+                </span>
+
+                <button
+                  type="button"
+                  (click)="cartService.increaseQuantity(item.id)">
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- Item Total -->
+            <div class="item-total">
+
+              <strong>
+                ₹{{ item.price * item.quantity }}
+              </strong>
+
+              <button
+                type="button"
+                class="remove-button"
+                (click)="cartService.removeFromCart(item.id)">
+                🗑️ Remove
+              </button>
+
+            </div>
+
+          </div>
+
+        }
+
+        <!-- Continue Shopping -->
+        <a routerLink="/products" class="continue-shopping">
+          ← Continue Shopping
+        </a>
+
+      </div>
+
+
+      <!-- Order Summary -->
+      <div class="cart-summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-row">
+          <span>Total Items</span>
+          <span>{{ cartService.cartCount() }}</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>₹{{ cartService.cartTotal() }}</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Delivery</span>
+          <span class="free">FREE</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Discount</span>
+          <span>₹0</span>
+        </div>
+
+        <hr />
+
+        <div class="total-row">
+          <span>Total</span>
+
+          <strong>
+            ₹{{ cartService.cartTotal() }}
+          </strong>
+        </div>
+
+        <!-- Checkout -->
+        <button
+          type="button"
+          class="checkout-button">
+          Proceed to Checkout
+        </button>
+
+        <!-- Clear Cart -->
+        <button
+          type="button"
+          class="clear-button"
+          (click)="cartService.clearCart()">
+          Clear Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  }
+
+</section>
