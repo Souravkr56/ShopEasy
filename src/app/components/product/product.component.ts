@@ -35,7 +35,7 @@ export class ProductComponent {
       category: 'Electronics',
       price: 1499,
       rating: 4.5,
-      image: 'https://via.placeholder.com/300x250?text=Headphones',
+      image: 'https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/g/691f01eb863e7c733fcfc4af/black-1.png',
       description: 'High quality wireless headphones with clear sound.'
     },
 
@@ -45,7 +45,7 @@ export class ProductComponent {
       category: 'Electronics',
       price: 2499,
       rating: 4.3,
-      image: 'https://via.placeholder.com/300x250?text=Smart+Watch',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/2/MK/KK/ZQ/35510924/bip-3-pro-5-500x500.png',
       description: 'Smart watch with fitness and health tracking.'
     },
 
@@ -55,7 +55,7 @@ export class ProductComponent {
       category: 'Footwear',
       price: 1999,
       rating: 4.6,
-      image: 'https://via.placeholder.com/300x250?text=Running+Shoes',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNY9X-Fg-o6t7h8Cf39S7jAWjmVyFUu-p7YzhSfuSyg&s',
       description: 'Comfortable running shoes for everyday use.'
     },
 
@@ -65,7 +65,7 @@ export class ProductComponent {
       category: 'Fashion',
       price: 699,
       rating: 4.2,
-      image: 'https://via.placeholder.com/300x250?text=T-Shirt',
+      image: 'https://m.media-amazon.com/images/I/710IISGKSlL._AC_UY1100_.jpg',
       description: 'Comfortable cotton casual t-shirt.'
     },
 
@@ -75,7 +75,7 @@ export class ProductComponent {
       category: 'Fashion',
       price: 999,
       rating: 4.4,
-      image: 'https://via.placeholder.com/300x250?text=Backpack',
+      image: 'https://conceptkart.com/cdn/shop/files/TECPHILE-Laptop-Bag-35L-Expandable-Anti-Theft-Travel-Backpack-for-Men-with-USB-Port-_2.jpg?v=1774089837',
       description: 'Water resistant backpack for laptops.'
     },
 
@@ -85,7 +85,7 @@ export class ProductComponent {
       category: 'Electronics',
       price: 1299,
       rating: 4.5,
-      image: 'https://via.placeholder.com/300x250?text=Speaker',
+      image: 'https://m.media-amazon.com/images/I/7101mxxpNPL.jpg',
       description: 'Portable Bluetooth speaker with powerful sound.'
     },
 
@@ -95,7 +95,7 @@ export class ProductComponent {
       category: 'Footwear',
       price: 2299,
       rating: 4.7,
-      image: 'https://via.placeholder.com/300x250?text=Sports+Shoes',
+      image: 'https://redtape.com/cdn/shop/files/RSO4863_1.jpg?v=1786010846',
       description: 'Lightweight sports shoes for active lifestyles.'
     },
 
@@ -105,7 +105,7 @@ export class ProductComponent {
       category: 'Home',
       price: 399,
       rating: 4.1,
-      image: 'https://via.placeholder.com/300x250?text=Coffee+Mug',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDhLpfcZsJOnncZcp3ixNFUkgSEkYhWn_Q7PPBgpHGqAbAQryMsKNxF8rE&s=10',
       description: 'Premium ceramic coffee mug.'
     }
 
